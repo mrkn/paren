@@ -1,11 +1,12 @@
-TARGET = paren
+TARGET = src/paren
+
+all: $(TARGET)
 
 $(TARGET):
-	@(echo '#! /bin/sh'; echo 'echo nil';) > $(TARGET)
-	@chmod 755 $(TARGET)
+	@$(MAKE) $(MAKEFLAGS) $(TARGET:src/%=%) -C src
+
+clean:
+	@$(MAKE) $(MAKEFLAGS) clean -C src
 
 test: $(TARGET)
 	@./test.sh || :
-
-clean:
-	@rm -f $(TARGET)

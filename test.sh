@@ -1,6 +1,6 @@
 #! /bin/sh
 
-result=$(echo '()' | ./paren -)
+result=$(echo '()' | ./src/paren -)
 if test "$result" = "nil"; then
   echo "PASS"
 else
