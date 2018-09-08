@@ -1,7 +1,7 @@
 #! /bin/sh
 
 result=$(echo '()' | ./src/paren -)
-if test "$result" = "nil"; then
+if test "$result" = "()"; then
   echo "PASS"
 else
   echo "FAILED"

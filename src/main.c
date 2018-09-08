@@ -3,6 +3,6 @@
 int
 main(int argc, char** argv)
 {
-  printf("nil\n");
+  printf("()\n");
   return 0;
 }
