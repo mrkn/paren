@@ -1,12 +1,10 @@
-TARGET = src/paren
+all: build
 
-all: $(TARGET)
-
-$(TARGET):
+build:
 	@$(MAKE) $(MAKEFLAGS) $(TARGET:src/%=%) -C src
 
 clean:
 	@$(MAKE) $(MAKEFLAGS) clean -C src
 
-test: $(TARGET)
+test: build
 	@./test.sh || :
